@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Yeni Yılımız</title>
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background:#000;
+  color:#fff;
+  text-align:center;
+  font-family:Arial, sans-serif;
+  overflow:hidden;
+}
+h1{font-size:22px; padding:20px;}
+p{margin:6px 0;}
+.heart{
+  position:absolute;
+  color:white;
+  font-size:18px;
+  animation:fall 6s linear infinite;
+}
+@keyframes fall{
+  from{top:-10%;}
+  to{top:110%;}
+}
+</style>
+</head>
+<body>
+
+<h1>
+Yeni yıla kalbimde seninle giriyorum.  
+Her günümde adın, her duamda gülüşün var.  
+Zaman geçse de sevgim sana hep aynı sıcaklıkla kalsın.  
+Bu yıl da, tüm yıllar da seninle olsun istiyorum.  
+Yeni yılımız kutlu olsun sevgilim 🤍
+</h1>
+
+<p>🤍 Seni seviyorum canımmm 🤍</p>
+<p>Mutlu ve huzurlu yıllar</p>
+
+<audio autoplay loop>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+setInterval(()=>{
+  const heart=document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML="🤍";
+  heart.style.left=Math.random()*100+"%";
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),6000);
+},300);
+</script>
+
+</body>
+</html>
